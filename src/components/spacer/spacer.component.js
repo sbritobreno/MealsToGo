@@ -10,7 +10,7 @@ const sizeVariant = {
 const positionVariant = {
   top: "marginTop",
   left: "marginLeft",
-  right: "marginTight",
+  right: "marginRight",
   bottom: "marginBottom",
 };
 
@@ -18,7 +18,8 @@ const getVariant = (position, size, theme) => {
   const sizeIndex = sizeVariant[size];
   const property = positionVariant[position];
   const value = theme.space[sizeIndex];
-  return `${property}: ${value}`;
+
+  return `${property}:${value}`;
 };
 
 const SpacerView = styled.View`
